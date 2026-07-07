@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form Wizard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="colorlib.com" />
+
+    <link
+      rel="stylesheet"
+      href="fonts/material-design-iconic-font/css/material-design-iconic-font.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <form action="" id="custom-wizard">
+        <!-- STEP PROGRESS INDICATORS -->
+        <div class="steps-progress">
+          <div class="step-indicator" id="indicator-1" data-step="1">
+            <img src="images/step-1-active.png" alt="Step 1" class="step-img" />
+            <span class="step-order">Step 01</span>
+            <img src="images/step-arrow.png" alt="" class="step-arrow" />
+          </div>
+          <div class="step-indicator" id="indicator-2" data-step="2">
+            <img src="images/step-2.png" alt="Step 2" class="step-img" />
+            <span class="step-order">Step 02</span>
+            <img src="images/step-arrow.png" alt="" class="step-arrow" />
+          </div>
+          <div class="step-indicator" id="indicator-3" data-step="3">
+            <img src="images/step-3.png" alt="Step 3" class="step-img" />
+            <span class="step-order">Step 03</span>
+            <img src="images/step-arrow.png" alt="" class="step-arrow" />
+          </div>
+          <div class="step-indicator" id="indicator-4" data-step="4">
+            <img src="images/step-4.png" alt="Step 4" class="step-img" />
+            <span class="step-order">Step 04</span>
+          </div>
+        </div>
+
+        <!-- SECTION 1 (Step 1) -->
+        <section class="wizard-step" id="step-1">
+          <h3>Basic details</h3>
+          <div class="form-row">
+            <div class="form-holder">
+              <i class="zmdi zmdi-account"></i>
+              <input
+                type="text"
+                class="form-control"
+                name="first_name"
+                placeholder="First Name"
+                minlength="2"
+                maxlength="50"
+                required
+              />
+            </div>
+            <div class="form-holder">
+              <i class="zmdi zmdi-account"></i>
+              <input
+                type="text"
+                class="form-control"
+                name="last_name"
+                placeholder="Last Name"
+                minlength="2"
+                maxlength="50"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <i class="zmdi zmdi-email"></i>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                placeholder="Email ID"
+                minlength="5"
+                maxlength="254"
+                required
+              />
+            </div>
+            <div class="form-holder">
+              <i class="zmdi zmdi-account-box-o"></i>
+              <input
+                type="text"
+                class="form-control"
+                name="user_id"
+                placeholder="Your User ID"
+                minlength="4"
+                maxlength="30"
+                pattern="^[a-zA-Z0-9_]+$"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <i class="zmdi zmdi-map"></i>
+              <input
+                type="text"
+                class="form-control"
+                name="country"
+                placeholder="Country"
+                minlength="2"
+                maxlength="60"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <div class="form-holder">
+                <i class="zmdi zmdi-pin"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="state"
+                  placeholder="State"
+                  minlength="2"
+                  maxlength="60"
+                  required
+                />
+              </div>
+              <div class="form-holder">
+                <i class="zmdi zmdi-pin-drop"></i>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="city"
+                  placeholder="City"
+                  minlength="2"
+                  maxlength="60"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder">
+              <i class="zmdi zmdi-smartphone-android"></i>
+              <input
+                type="tel"
+                class="form-control"
+                name="phone"
+                placeholder="Phone Number"
+                minlength="7"
+                maxlength="15"
+                required
+              />
+            </div>
+            <div class="form-holder password-field">
+              <i class="zmdi zmdi-eye toggle-password"></i>
+              <input
+                type="password"
+                class="form-control password-input"
+                placeholder="Reference Code"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 (Step 2) -->
+        <section class="wizard-step" id="step-2" style="display: none">
+          <h3>Password change</h3>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input
+                type="password"
+                class="form-control"
+                name="current_password"
+                placeholder="Current Password"
+                minlength="8"
+                maxlength="128"
+                required
+              />
+              <i class="zmdi zmdi-lock-open"></i>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input
+                type="password"
+                class="form-control"
+                name="current_password_confirm"
+                placeholder="Confirm Current Password"
+                minlength="8"
+                maxlength="128"
+                required
+              />
+              <i class="zmdi zmdi-lock-open"></i>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input
+                type="password"
+                class="form-control"
+                name="new_password"
+                placeholder="New Password"
+                minlength="8"
+                maxlength="128"
+                required
+              />
+              <i class="zmdi zmdi-lock-open"></i>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-holder w-100">
+              <input
+                type="password"
+                class="form-control"
+                name="confirm_new_password"
+                placeholder="Confirm New Password"
+                minlength="8"
+                maxlength="128"
+                required
+              />
+              <i class="zmdi zmdi-lock-open"></i>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 (Step 3) -->
+        <section class="wizard-step" id="step-3" style="display: none">
+          <h3 style="margin-bottom: 16px">My Cart</h3>
+          <table cellspacing="0" class="table-cart">
+            <thead>
+              <th>&nbsp;</th>
+              <th style="text-align: left">Product Detail</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+              <th>&nbsp;</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="product-thumb">
+                  <div class="item-thumb">
+                    <img src="images/item-1.jpg" alt="" />
+                  </div>
+                </td>
+                <td class="product-detail" data-title="Product Detail">
+                  <div>
+                    <a href="#">Cherry</a>
+                    <span class="currency">$</span>
+                    <span class="price" data-price="35">35</span>
+                  </div>
+                </td>
+                <td class="product-quantity" data-title="Quantity">
+                  <div class="quantity-box">
+                    <span class="btn-plus">+</span>
+                    <input
+                      type="number"
+                      class="qty-input"
+                      value="1"
+                      min="0"
+                      readonly
+                    />
+                    <span class="btn-minus">-</span>
+                  </div>
+                </td>
+                <td class="total-price" data-title="Total Price">
+                  <span class="amount"
+                    >$<span class="item-total">35</span></span
+                  >
+                </td>
+                <td class="product-remove">
+                  <a href="#"><i class="zmdi zmdi-close-circle-o"></i></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="product-thumb">
+                  <div class="item-thumb">
+                    <img src="images/item-2.jpg" alt="" />
+                  </div>
+                </td>
+                <td class="product-detail" data-title="Product Detail">
+                  <div>
+                    <a href="#">Mango</a>
+                    <span class="currency">$</span>
+                    <span class="price" data-price="20">20</span>
+                  </div>
+                </td>
+                <td class="product-quantity" data-title="Quantity">
+                  <div class="quantity-box">
+                    <span class="btn-plus">+</span>
+                    <input
+                      type="number"
+                      class="qty-input"
+                      value="1"
+                      min="0"
+                      readonly
+                    />
+                    <span class="btn-minus">-</span>
+                  </div>
+                </td>
+                <td class="total-price" data-title="Total Price">
+                  <span class="amount"
+                    >$<span class="item-total">20</span></span
+                  >
+                </td>
+                <td class="product-remove">
+                  <a href="#"><i class="zmdi zmdi-close-circle-o"></i></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- SECTION 4 (Step 4) -->
+        <section class="wizard-step" id="step-4" style="display: none">
+          <h3>Cart Totals</h3>
+          <div class="cart_totals">
+            <table cellspacing="0">
+              <tr class="cart-subtotal">
+                <th>Subtotal</th>
+                <td>
+                  <span class="amount"
+                    >$<span id="cart-subtotal">55.00</span></span
+                  >
+                </td>
+              </tr>
+              <tr class="cart-subtotal shipping">
+                <th>Shipping:</th>
+                <td>
+                  <div class="checkbox">
+                    <label>
+                      <input type="radio" name="shipping" checked /> Free
+                      Shipping
+                      <span class="checkmark"></span>
+                    </label>
+                    <label>
+                      <input type="radio" name="shipping" /> Local pickup:
+                      <span>$0.00</span>
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                  <span>Calculate Shipping</span>
+                </td>
+              </tr>
+              <tr class="cart-subtotal">
+                <th>Service <span>(estimated for Vietnam)</span></th>
+                <td>
+                  <span class="amount"
+                    >$<span id="cart-service">5.60</span></span
+                  >
+                </td>
+              </tr>
+              <tr class="order-total">
+                <th>Total</th>
+                <td>
+                  <span class="amount"
+                    >$<span id="cart-total">60.60</span></span
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <div class="actions">
+          <div class="left-buttons">
+            <button type="button" id="btn-prev" class="btn-backward">
+              Back
+            </button>
+          </div>
+          <div class="center-buttons">
+            <button
+              type="button"
+              id="btn-finish"
+              class="btn-forward"
+              style="display: none"
+            >
+              Proceed to checkout
+            </button>
+          </div>
+          <div class="right-buttons">
+            <button type="button" id="btn-next" class="btn-forward">
+              Continue
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/jquery-4.0.0.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
